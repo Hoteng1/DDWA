@@ -3,7 +3,7 @@
     var FIO = document.getElementById("exampleInputFIO");
     var age = document.getElementById("exampleInputAge");
     var special = document.getElementById("exampleInputSpecial");
-    var sex = document.getElementById("optionsRadios");
+    var sex = document.getElementById("optionsRadios1").checked;
     var salary = document.getElementById("exampleInputSalary");
     var company = document.getElementById("exampleInputCompany");
     var experience = document.getElementById("exampleInputExperience");
@@ -13,7 +13,7 @@
     var selectedValue = document.getElementById("exampleFormControlType");
 
 function Save(type){
-  var worker = PlantFromForm(type);
+  var worker = WorkerFromForm(type);
   if(id!=null) Put(id,worker);
   else Post(worker);
 }
@@ -35,6 +35,8 @@ function WorkerFromForm(type){
   worker.setCompany(company.value);
   return worker;
 }
+
+
 
 function FormFromClass(worker, type){
   if(type == '0'){
@@ -63,8 +65,10 @@ function getParam(name) {
 }
 
 function changeType() {
+
   var id = selectedValue.options[selectedValue.selectedIndex].value;
-  if(id == "0"){
+  alert(id);
+  if(ids == "0"){
   document.getElementById("exampleInputOffice").hidden=false
   document.getElementById("exampleInputPosition").hidden=true
 }

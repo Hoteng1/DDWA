@@ -14,7 +14,7 @@ function DeleteCard(id){
             if (this.readyState == 4 && this.status == 200) {
             var myTableDiv = document.getElementById("list");
                 myTableDiv.innerHTML = "";
-                getPlants();
+                getWokers();
             }};
     Delete(id, func);
 }
