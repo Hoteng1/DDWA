@@ -68,7 +68,7 @@ function changeType() {
 
   var id = selectedValue.options[selectedValue.selectedIndex].value;
   alert(id);
-  if(ids == "0"){
+  if(id === "WorkerIndustrialInc"){
   document.getElementById("exampleInputOffice").hidden=false
   document.getElementById("exampleInputPosition").hidden=true
 }
