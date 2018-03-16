@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eu">
 <head>
     <!-- Кодировка веб-страницы -->
     <meta charset="utf-8">
@@ -18,16 +18,19 @@
     <!-- Подключаем Bootstrap JS -->    
     <script src="js/bootstrap.min.js"></script>
     <form  onsubmit="saveWorker()" action="index.html" class="center">
+        
+            
+        
         <div class="form-group">
-            <label for="exampleFormControlType">Type</label>
-            <select class="form-control" id="exampleFormControlType" onchange="changeType()">
-                <option>WorkerIndustrialInc</option>
-                <option>WorkerTransportInc</option>
-            </select>
-        </div>
-        <label>==============ADD====================</label>
-        <div class="form-group">
-          
+            <br>
+                <label for="exampleFormControlType">Type</label>
+                <select class="form-control;center-block" id="exampleFormControlType" onchange="changeType()">
+                    <option>WorkerIndustrialInc</option>
+                    <option>WorkerTransportInc</option>
+                </select>
+                <br>
+                <label>==============ADD====================</label>
+                <br>
           <input type="text" class="form-control" id="exampleInputFIO" pattern="^[a-zA-Z\s]{3,25}" required  placeholder="Enter FIO">
           
         </div>
@@ -78,7 +81,6 @@
 <script type="text/javascript" src="js/method.js"></script>
 <script type="text/javascript">
 var selectedValue = document.getElementById("exampleFormControlType");
-
 GetWorker();
 changeType();
 function saveWorker(){

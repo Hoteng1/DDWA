@@ -20,22 +20,22 @@ WorkerIndustrialInc.prototype.jsonToObject=function(json)
     this.experience=obj["experience"];
     this.office=obj["office"];
 }
-	WorkerTransportInc.prototype.setExperience=function(experience)
+	WorkerIndustrialIncInc.prototype.setExperience=function(experience)
 	{
 		this.experience=experience;
 	}
 	
-	WorkerTransportInc.prototype.getExperience=function()
+	WorkerIndustrialIncInc.prototype.getExperience=function()
 	{
 		return this.experience;
 	}
 	
-	WorkerTransportInc.prototype.setОffice=function(office)
+	WorkerIndustrialIncInc.prototype.setОffice=function(office)
 	{
 		this.office=office;
 	}
 	
-	WorkerTransportInc.prototype.getОffice=function()
+	WorkerIndustrialIncInc.prototype.getОffice=function()
 	{
 		return this.office;
 	}
