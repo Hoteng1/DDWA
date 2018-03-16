@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "FIO": "",
+      "age": "",
+      "special": "",
+      "salary": "",
+      "company": "",
+      "experience": "",
+      "office": "",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

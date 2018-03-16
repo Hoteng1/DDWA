@@ -3,7 +3,7 @@
     var FIO = document.getElementById("exampleInputFIO");
     var age = document.getElementById("exampleInputAge");
     var special = document.getElementById("exampleInputSpecial");
-    var sex = document.getElementById("optionsRadios1").checked;
+    var sex = document.getElementById("exampleFormControlSex");
     var salary = document.getElementById("exampleInputSalary");
     var company = document.getElementById("exampleInputCompany");
     var experience = document.getElementById("exampleInputExperience");
@@ -13,13 +13,14 @@
     var selectedValue = document.getElementById("exampleFormControlType");
 
 function Save(type){
+    
   var worker = WorkerFromForm(type);
   if(id!=null) Put(id,worker);
   else Post(worker);
 }
 
 function WorkerFromForm(type){
-  if(type == '0'){
+  if(type === 'WorkerIndustrialInc'){
       var worker = new WorkerIndustrialInc(experience.value, office.value);
 
   }
@@ -30,7 +31,7 @@ function WorkerFromForm(type){
   worker.setAge(age.value);
   worker.setSpecial(special.value);
   debugger;
-  worker.setSex(sex.value);
+  worker.setSex( sex[sex.selectedIndex].text);
   worker.setSalary(salary.value);
   worker.setCompany(company.value);
   return worker;
@@ -39,7 +40,7 @@ function WorkerFromForm(type){
 
 
 function FormFromClass(worker, type){
-  if(type == '0'){
+  if(type === 'WorkerIndustrialInc'){
       experience.value = worker.getExperience();
       office.value = worker.getOffice();
   }
@@ -52,7 +53,7 @@ function FormFromClass(worker, type){
   FIO.value = worker.getFIO();
   age.value = worker.getAge();
   special.value = worker.getSpecial();
-  sex.value=worker.getSex();
+  setSelectValue(worker.getSex());
   salary.value = worker.getSalary();
   company.value = worker.getCompany();
 }
@@ -64,11 +65,18 @@ function getParam(name) {
   return param !== undefined ? param.split('&')[0] : null;
 }
 
+function setSelectValue(name) {
+    for(let i = 0; i < sex.length; i++) {
+     debugger;
+       if(sex[i].text == name) {
+           sex.selectedIndex = i
+           break;
+     }}
+ }
 function changeType() {
 
   var id = selectedValue.options[selectedValue.selectedIndex].value;
-  alert(id);
-  if(id === "WorkerIndustrialInc"){
+   if(id === "WorkerIndustrialInc"){
   document.getElementById("exampleInputOffice").hidden=false
   document.getElementById("exampleInputPosition").hidden=true
 }

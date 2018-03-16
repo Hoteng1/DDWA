@@ -25,7 +25,7 @@ function DeleteCard(id){
     var tableBody = document.createElement('TBODY')
     table.border = '1px'
     table.appendChild(tableBody);
-
+    alert("I create");
     var heading = new Array();
     heading[0] = "FIO"
     heading[1] = "age"
