@@ -87,6 +87,7 @@ function changeType() {
    if(id === "WorkerIndustrialInc"){
   document.getElementById("exampleInputOffice").hidden=false
   document.getElementById("exampleInputPosition").hidden=true
+  
 }
   else{
     document.getElementById("exampleInputOffice").hidden=true
@@ -95,6 +96,7 @@ function changeType() {
 }
 
 function GetWorker(){
+    
   if(id!=null){
     var func = function() {
         
