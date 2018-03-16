@@ -9,6 +9,7 @@ WorkerTransportInc.prototype=Object.create(Worker.prototype);
 
 WorkerTransportInc.prototype.jsonToObject=function(json)
 {
+   
     var obj=json;
     this.FIO=obj["FIO"];
     this.age=obj["age"];
@@ -18,23 +19,25 @@ WorkerTransportInc.prototype.jsonToObject=function(json)
     this.company=obj["company"];
     this.experience=obj["experience"];
     this.position=obj["position"];
+    
 }
-	this.setExperience=function(experience)
+    WorkerTransportInc.prototype.setExperience=function(experience)
 	{
 		this.experience=experience;
 	}
 	
-	this.getExperience=function()
+	WorkerTransportInc.prototype.getExperience=function()
 	{
-		return experience;
+        
+		return this.experience;
 	}
 	
-	this.setPosition=function(position)
+	WorkerTransportInc.prototype.setPosition=function(position)
 	{
 		this.position=position;
 	}
 	
-	this.getОffice=function()
+	WorkerTransportInc.prototype.getPosition=function()
 	{
-		return position;
+		return this.position;
 	}

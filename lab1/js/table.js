@@ -25,7 +25,7 @@ function DeleteCard(id){
     var tableBody = document.createElement('TBODY')
     table.border = '1px'
     table.appendChild(tableBody);
-    alert("I create");
+   
     var heading = new Array();
     heading[0] = "FIO"
     heading[1] = "age"
@@ -63,10 +63,10 @@ function DeleteCard(id){
         var link3 = document.createElement("a");
         var linkText3 = document.createTextNode("Info");
         link.title = "Edit";
-        link.href = "2.html?id=" + stock[i][key] ;
+        link.href = "create.html?id=" + stock[i][key] ;
         link2.href = "javascript:DeleteCard("+ stock[i][key] + ");";
         link2.title = "Delete";
-        link3.href = "3.html?id=" + stock[i][key] ;
+        link3.href = "update.html?id=" + stock[i][key] ;
         link3.title = "Info";
 
         link.appendChild(linkText);

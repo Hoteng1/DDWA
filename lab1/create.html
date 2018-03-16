@@ -17,7 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Подключаем Bootstrap JS -->    
     <script src="js/bootstrap.min.js"></script>
-    <form  onsubmit="saveWorker()" action="create.html">
+    <form  onsubmit="saveWorker()" action="index.html" class="center">
         <div class="form-group">
             <label for="exampleFormControlType">Type</label>
             <select class="form-control" id="exampleFormControlType" onchange="changeType()">
@@ -78,10 +78,11 @@
 <script type="text/javascript" src="js/method.js"></script>
 <script type="text/javascript">
 var selectedValue = document.getElementById("exampleFormControlType");
+
 GetWorker();
 changeType();
 function saveWorker(){
- 
+ alert("SaveWOrker");
   Save(selectedValue.options[selectedValue.selectedIndex].value);
 }
 function onInvalid(msg) {

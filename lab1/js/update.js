@@ -13,14 +13,16 @@
     var selectedValue = document.getElementById("exampleFormControlType");
 
 function Save(type){
-    
+    alert("Save");
   var worker = WorkerFromForm(type);
   if(id!=null) Put(id,worker);
   else Post(worker);
 }
 
 function WorkerFromForm(type){
+    alert("WorkerFromForm");
   if(type === 'WorkerIndustrialInc'){
+      alert("WorkerIndustrialInc");
       var worker = new WorkerIndustrialInc(experience.value, office.value);
 
   }
@@ -30,7 +32,6 @@ function WorkerFromForm(type){
   worker.setFIO(FIO.value);
   worker.setAge(age.value);
   worker.setSpecial(special.value);
-  debugger;
   worker.setSex( sex[sex.selectedIndex].text);
   worker.setSalary(salary.value);
   worker.setCompany(company.value);
@@ -40,22 +41,29 @@ function WorkerFromForm(type){
 
 
 function FormFromClass(worker, type){
-  if(type === 'WorkerIndustrialInc'){
+    
+  if(type == '1'){
       experience.value = worker.getExperience();
       office.value = worker.getOffice();
+      selectedValue.selectedIndex = 0;
   }
   else{
+      
+    
       experience.value = worker.getExperience();
       position.value = worker.getPosition();
+      selectedValue.selectedIndex = 1;
+      
   }
-
-  selectedValue.selectedIndex = type;
+  
+  
   FIO.value = worker.getFIO();
   age.value = worker.getAge();
   special.value = worker.getSpecial();
   setSelectValue(worker.getSex());
   salary.value = worker.getSalary();
   company.value = worker.getCompany();
+  
 }
 
 
@@ -89,6 +97,7 @@ function changeType() {
 function GetWorker(){
   if(id!=null){
     var func = function() {
+        
         if (this.readyState == 4 && this.status == 200) {
           var obj = JSON.parse(this.responseText);
           if(obj["office"]==undefined){
@@ -102,6 +111,7 @@ function GetWorker(){
               worker.jsonToObject(obj);
                 FormFromClass(worker,1);
                 changeType();
+                
           }
          }};
     Get(id, func);

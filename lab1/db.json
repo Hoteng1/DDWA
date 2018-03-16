@@ -1,14 +1,37 @@
 {
   "posts": [
     {
-      "FIO": "",
-      "age": "",
-      "special": "",
-      "salary": "",
-      "company": "",
-      "experience": "",
-      "office": "",
-      "id": 1
+      "FIO": "Makarov Makar Alexeyvich",
+      "age": "133",
+      "special": "Programma",
+      "sex": "Male",
+      "salary": "900",
+      "company": "JvtTech",
+      "experience": "0",
+      "position": "QDASDasdfAS",
+      "id": 2
+    },
+    {
+      "FIO": "fasdf",
+      "age": "13",
+      "special": "asdfs",
+      "sex": "Male",
+      "salary": "134",
+      "company": "aadf",
+      "experience": "111",
+      "position": "asdf",
+      "id": 3
+    },
+    {
+      "FIO": "fasd",
+      "age": "123",
+      "special": "adsf",
+      "sex": "Male",
+      "salary": "123",
+      "company": "adf",
+      "experience": "123",
+      "position": "qadfas",
+      "id": 4
     }
   ],
   "comments": [],
