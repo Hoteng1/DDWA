@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+       
+    <!-- Подключаем jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->    
+    <script src="js/bootstrap.min.js"></script>
+    <center style="margin-top: 2%; margin-left: 4%; margin-right: 4%;">
+        <div id="list" >
+            <table border="1px" class="table" id="table">
+                <thead>
+                  <th width="120">FIO</th>
+                  <th width="120">Age</th>
+                  <th width="120">Special</th>
+                  <th width="120">Sex</th>
+                  <th width="120">Salary</th>
+                  <th width="120">Company</th>
+                  <th width="120">Experince</th>
+                  <th width="120">Office/Position</th>
+                  <th width="120">Id</th>
+                  <th width="120">Actions</th>
+                </thead>
+                <tbody id="content">
+                </tbody>
+              </table>
+            </div>
+            <br/>
+        </center>
+        <div class="form-group mb-2">
+            <input type="text" class="form-control" style="width:250px; margin-top: 2%; margin-left: 50%; margin-right: 10%" id="searchInput" onkeyup="Search(table,searchInput.value);" placeholder="Поиск">
+          </div>
+            <a href="create.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Create</a> 
+            
+    </body>
+<script type="text/javascript" src="js/WorkerIndustrialInc.js"></script>
+<script type="text/javascript" src="js/WorkerTransportInc.js"></script>
+<script type="text/javascript" src="js/update.js"></script>
+<script type="text/javascript" src="js/method.js"></script>
+<script type="text/javascript" src="js/table.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+
+getWokers();</script>
+</html>

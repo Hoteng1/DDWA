@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    
+    <!-- Подключаем jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->    
+    <script src="js/bootstrap.min.js"></script>
+    <form  onsubmit="saveWorker()" action="index.html" >
+        
+            
+        
+        <div class="form-group">
+            <br>
+                <label for="exampleFormControlType">Type</label>
+                <select class="form-control;center-block" id="exampleFormControlType" onchange="changeType()">
+                    <option>WorkerIndustrialInc</option>
+                    <option>WorkerTransportInc</option>
+                </select>
+                <br>
+                <label>==============ADD====================</label>
+                <br>
+          <input type="text" class="form-control" id="exampleInputFIO" pattern="^[a-zA-Z]{3,25}" required  placeholder="Enter FIO">
+          
+        </div>
+        <div class="form-group">
+          
+          <input type="number" class="form-control" min="18" max="65" id="exampleInputAge" required placeholder="Enter AGE">
+        </div>
+        <div class="form-group">
+            
+            <input type="text" class="form-control" id="exampleInputSpecial" pattern="[a-zA-Z]{3,25}" required  placeholder="Enter Special">
+        </div>
+        <div>
+            <select class="form-control" id="exampleFormControlSex" onchange="changeType()" >
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+             
+        </div>
+        
+          <div class="form-group">
+            
+            <input type="number" class="form-control" id="exampleInputSalary" min="1" max="10000"  required  placeholder="Enter Salary RUB">
+        </div>
+        <div class="form-group">
+          
+          <input type="text" class="form-control" id="exampleInputCompany" pattern="[a-zA-Z]{3,25}" required   placeholder="Enter Company">
+        </div>
+        <div class="form-group">
+           
+            <input type="number" class="form-control" id="exampleInputExperience" min="0" max="45"  placeholder="Enter Experience">
+          </div>
+        <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputOffice" pattern="[a-zA-Z]{3,25}" placeholder="Enter Office">
+        </div>
+         <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPosition" pattern="[a-zA-Z]{3,25}"  placeholder="Enter Position">
+         </div>
+
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <script type="text/javascript" src="js/Worker.js"></script>
+<script type="text/javascript" src="js/WorkerIndustrialInc.js"></script>
+<script type="text/javascript" src="js/WorkerTransportInc.js"></script>
+<script type="text/javascript" src="js/update.js"></script>
+<script type="text/javascript" src="js/method.js"></script>
+<script type="text/javascript">
+
+GetWorker();
+changeType();
+function saveWorker(){
+ alert("SaveWOrker");
+  Save(exampleFormControlType.options[exampleFormControlType.selectedIndex].value);
+}
+function onInvalid(msg) {
+    alert(msg);
+}
+</script>
+</html>
