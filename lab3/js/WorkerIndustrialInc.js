@@ -1,5 +1,5 @@
 "use strict"
-class WorkerIndustrialInc extends Worker {
+class WorkerIndustrialInc extends WorkerBase {
 	constructor(experience, office) {
 		super();
 		this.experience = experience;
