@@ -44,7 +44,7 @@ function FormFromClass(worker, type){
     
   if(type == '1'){
       experience.value = worker.getExperience();
-      office.value = worker.getOffice();
+      office.value = worker.getОffice();
       selectedValue.selectedIndex = 0;
   }
   else{
