@@ -31,16 +31,16 @@
                 <br>
                 <label>==============ADD====================</label>
                 <br>
-          <input type="text" class="form-control" id="exampleInputFIO" pattern="^[a-zA-Z\s]{3,25}" required  placeholder="Enter FIO">
+          <input type="text" class="form-control" id="exampleInputFIO" pattern="^[a-zA-Z]{3,25}" required  placeholder="Enter FIO">
           
         </div>
         <div class="form-group">
           
-          <input type="number" class="form-control" pattern="[0-9]{,3}" id="exampleInputAge" required placeholder="Enter AGE">
+          <input type="number" class="form-control" min="18" max="65" id="exampleInputAge" required placeholder="Enter AGE">
         </div>
         <div class="form-group">
             
-            <input type="text" class="form-control" id="exampleInputSpecial" pattern="[a-zA-Z\s]{3,25}" required  placeholder="Enter Special">
+            <input type="text" class="form-control" id="exampleInputSpecial" pattern="[a-zA-Z]{3,25}" required  placeholder="Enter Special">
         </div>
         <div>
             <select class="form-control" id="exampleFormControlSex" onchange="changeType()" >
@@ -52,21 +52,21 @@
         
           <div class="form-group">
             
-            <input type="number" class="form-control" id="exampleInputSalary" pattern="[0-9]{,3}"  required  placeholder="Enter Salary RUB">
+            <input type="number" class="form-control" id="exampleInputSalary" min="1" max="10000"  required  placeholder="Enter Salary RUB">
         </div>
         <div class="form-group">
           
-          <input type="text" class="form-control" id="exampleInputCompany" pattern="[a-zA-Z\s]{3,25}" required   placeholder="Enter Company">
+          <input type="text" class="form-control" id="exampleInputCompany" pattern="[a-zA-Z]{3,25}" required   placeholder="Enter Company">
         </div>
         <div class="form-group">
            
-            <input type="number" class="form-control" id="exampleInputExperience" pattern="[0-9]{,2}"  placeholder="Enter Experience">
+            <input type="number" class="form-control" id="exampleInputExperience" min="0" max="45"  placeholder="Enter Experience">
           </div>
         <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputOffice" placeholder="Enter Office">
+                <input type="text" class="form-control" id="exampleInputOffice" pattern="[a-zA-Z]{3,25}" placeholder="Enter Office">
         </div>
          <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputPosition"  placeholder="Enter Position">
+            <input type="text" class="form-control" id="exampleInputPosition" pattern="[a-zA-Z]{3,25}"  placeholder="Enter Position">
          </div>
 
       
