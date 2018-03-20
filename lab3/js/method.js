@@ -1,41 +1,42 @@
 "use strict"
 
-var url = "http://localhost:3000/posts/";
-function Get(id, func){
-  fetch(url + id)
-    .then(function(response) { return response.json(); })
-    .then(func);
+const url = "http://localhost:3000/posts/";
+async function Get(id, func){
+  let responseJSON = await fetch(url + id)
+  let response = await responseJSON.json()
+  return await func(response)
 }
 
-function GetAll(func){
-  fetch(url)
-    .then(function(response) { return response.json(); })
-    .then(func);
+async function GetAll(func){
+  let responseJSON = await fetch(url)
+  let response = await responseJSON.json()
+  return await func(response)
 }
 
-function Delete(id, func){
-  if(confirm("Delete worker?")){
-    let options = {method:'Delete'};
-    fetch(url + id, options).then(func);
+async function Delete(id, func){
+  if(confirm("Delete of Worker?")){
+    let options = {method:'Delete'}
+    let response = await fetch(url + id, options)
+    return await func(response)
+	func()
   }
 }
 
-function Post(data){
+async function Post(data, func){
   let options = {
     method:'Post',
     headers:{'Content-Type': 'application/json'},
     body:JSON.stringify(data)
-  };
-  fetch(url, options);
-  alert("Saved");
+  }
+  let response = fetch(url, options)
+  return await func(response)
 }
 
-function Put(id, data){
+async function Put(id, data){
   let options = {
     method:'Put',
     headers:{'Content-Type': 'application/json'},
     body:JSON.stringify(data)
-  };
-  fetch(url + id, options);
-  alert("Saved");
+  }
+  return await fetch(url+id, options)
 }

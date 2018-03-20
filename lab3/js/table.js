@@ -1,18 +1,40 @@
 "use strict"
+let firstType = []
+let secondType = []
 
 function getWokers(){
     
     debugger;
     let func = function(response) {
-         addTable(response);
+        divide(response, firstType, secondType)
+        addTable(firstType, "contentIndu")
+        addTable(secondType, "contentTran")
             };
     GetAll(func);
 }
 
 function showWokers(workers){
+    divide(workers)
+    addTable(firstType, "contentEl")
+    addTable(secondType, "contentPaporotnik")
     
-    let array = [...workers];
-    addTable(workers);
+}
+
+function divide(stock){
+	firstType = []
+	secondType = []
+    for (let i = 0; i < stock.length; i++) {
+            for (let key in stock[i]) {
+                    if(key=="office"){
+                        firstType.push(stock[i])
+                        break
+                    }
+                    if(key=="position"){
+                        secondType.push(stock[i])
+                        break
+                    }
+                }
+            }
 }
 
 function DeleteCard(id){
@@ -25,26 +47,38 @@ function DeleteCard(id){
     Delete(id, func);
 }
 
- function addTable(stock) {
-    var myTableDiv = document.getElementById("content")
+ function addTable(stock , tableName) {
+    let myTableDiv = document.getElementById(tableName);
+	myTableDiv.innerHTML = "";
     for (let i = 0; i < stock.length; i++) {
         let tr = document.createElement('TR');
         let lastKey;
+        let td
         for (let key in stock[i]) {
-            let td = document.createElement('TD')
+            td = document.createElement('TD')
             td.width = "120";
             td.appendChild(document.createTextNode(stock[i][key]));
             tr.appendChild(td);
             lastKey = key;
         }
 
-        let div = document.createElement('div');
+      
+
+
+
+        td = document.createElement('TD')
+        td.width = "100%"
+        
+        td.className = "btn-group-justified"
         let link = document.createElement("a");
-        let linkText = document.createTextNode("Edit ");
+        link.className ="btn btn-primary"
+        let linkText = document.createTextNode("Edit");
         let link2 = document.createElement("a");
-        let linkText2 = document.createTextNode(" Delete");
+        link2.className ="btn btn-primary"
+        let linkText2 = document.createTextNode(" Del");
         let link3 = document.createElement("a");
-        let linkText3 = document.createTextNode("Info");
+        link3.className ="btn btn-primary"
+        let linkText3 = document.createTextNode(" Open");
         link.title = "Edit";
         link.href = `create.html?id=${stock[i][lastKey]}` ;
         link2.href = `javascript:DeleteCard(${stock[i][lastKey]});`;
