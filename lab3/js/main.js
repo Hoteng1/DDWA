@@ -1,5 +1,5 @@
 
-let worker = new Worker('worker.js');
+let worker = new Worker('js/worker.js');
 let countWork = document.getElementById("countWork");
 let updateTime = document.getElementById("updateTime");
 let start, end, lastValue, time = 15000;

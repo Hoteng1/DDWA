@@ -23,6 +23,7 @@ async function Delete(id, func){
 }
 
 async function Post(data, func){
+  debugger;
   let options = {
     method:'Post',
     headers:{'Content-Type': 'application/json'},

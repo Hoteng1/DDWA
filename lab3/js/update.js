@@ -17,7 +17,9 @@ function Save(type){
     
   workerObj = WorkerFromForm(type);
   if(id!=null) Put(id,workerObj);
-  else Post(workerObj);
+  else Post(workerObj, function(){
+    alert("Saved")
+  });
 }
 
 function WorkerFromForm(type){
