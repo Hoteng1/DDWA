@@ -1,4 +1,3 @@
-"use strict"
 class WorkerBase {
 	constructor() {
 		this.FIO ;
@@ -46,3 +45,5 @@ class WorkerBase {
 		};
 	}
 }
+
+

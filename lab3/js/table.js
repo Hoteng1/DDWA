@@ -15,8 +15,9 @@ function getWokers(){
 
 function showWokers(workers){
     divide(workers)
-    addTable(firstType, "contentEl")
-    addTable(secondType, "contentPaporotnik")
+
+    addTable(firstType, "contentIndu")
+    addTable(secondType, "contentTran")
     
 }
 
@@ -38,16 +39,14 @@ function divide(stock){
 }
 
 function DeleteCard(id){
-    var func = function() {
-           
-            var myTableDiv = document.getElementById("content");
-                myTableDiv.innerHTML = "";
-                getWokers();
-            };
+    let func = function() {
+        getPlants();
+     };
     Delete(id, func);
+
 }
 
- function addTable(stock , tableName) {
+ function addTable(stock,tableName) {
     let myTableDiv = document.getElementById(tableName);
 	myTableDiv.innerHTML = "";
     for (let i = 0; i < stock.length; i++) {

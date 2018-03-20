@@ -1,3 +1,5 @@
+'use strict'
+
 onmessage = function(e) {
   let offset = e.data
   setTimeout(getCount, offset)

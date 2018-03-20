@@ -1,12 +1,12 @@
-let worker = new Worker("worker.js")
+let workerObj = new Worker("js/worker.js")
 let countWork = document.getElementById("countWork")
 let updateTime = document.getElementById("updateTime")
 let start, end, lastValue, time = 15000
 
-worker.start = function() {
+workerObj.start = function() {
 	start = new Date()
 	end = localStorage.getItem('end')
-	worker.postMessage(end)
+	workerObj.postMessage(end)
 	countWork.value =  localStorage.getItem('lastValue')
 	setInterval(
 		function(){
@@ -16,7 +16,7 @@ worker.start = function() {
 		},200)
 }()
 
-worker.onmessage = function(e){
+workerObj.onmessage = function(e){
 	end = time
 	countWork.value = e.data
 	start = new Date()
