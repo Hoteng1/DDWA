@@ -85,14 +85,14 @@ function DeleteCard(id){
         link3.href = `update.html?id=${stock[i][lastKey]}`;
         link3.title = "Info";
 
-        link.appendChild(linkText);
-        link2.appendChild(linkText2);
-        link3.appendChild(linkText3);
-        div.appendChild(link);
-        div.appendChild(link2);
-        div.appendChild(link3);
-        tr.appendChild(div);
-        myTableDiv.appendChild(tr);
+        link.appendChild(linkText)
+        link2.appendChild(linkText2)
+        link3.appendChild(linkText3)
+        td.appendChild(link)
+        td.appendChild(link2)
+        td.appendChild(link3)
+        tr.appendChild(td)
+        myTableDiv.appendChild(tr)
     }
     
 }

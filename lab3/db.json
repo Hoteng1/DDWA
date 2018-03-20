@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "FIO": "Makarov Makar Alexeyvich",
-      "age": "133",
-      "special": "Programma",
+      "experience": "0",
+      "position": "QDASDasdfAS",
+      "FIO": "Makarov",
+      "age": "23",
+      "special": "Programm",
       "sex": "Male",
       "salary": "900",
       "company": "JvtTech",
-      "experience": "0",
-      "position": "QDASDasdfAS",
       "id": 2
     },
     {
