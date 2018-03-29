@@ -73,8 +73,8 @@
       "sex": "Male",
       "salary": "21312",
       "company": "asdfa",
-      "experience": "1123",
-      "position": "fasdfsadf",
+      "experience": "111",
+      "office": "Police",
       "id": 8
     },
     {
@@ -96,7 +96,7 @@
       "salary": "123",
       "company": "sadf",
       "experience": "123",
-      "position": "asdfsdfas",
+      "office": "POO",
       "id": 10
     },
     {
@@ -107,7 +107,7 @@
       "salary": "231",
       "company": "asdf",
       "experience": "123",
-      "office": "sdfasdf",
+      "office": "sdfasdf 1",
       "id": 11
     }
   ],
